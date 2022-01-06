@@ -59,12 +59,13 @@ export default {
   methods: {
     calculator (e) {
       let symbol = e.innerText
-      
-      if(symbol == '+') this.result = this.firstNumber + this.secondNumber
-      if(symbol == '-') this.result = this.firstNumber - this.secondNumber
-      if(symbol == '/') this.result = this.firstNumber / this.secondNumber
-      if(symbol == '*') this.result = this.firstNumber * this.secondNumber
-      if(symbol == '**') this.result = this.firstNumber ** this.secondNumber
+      if (symbol) {
+        if(symbol == '+') this.result = this.firstNumber + this.secondNumber
+        if(symbol == '-') this.result = this.firstNumber - this.secondNumber
+        if(symbol == '/') this.result = this.firstNumber / this.secondNumber
+        if(symbol == '*') this.result = this.firstNumber * this.secondNumber
+        if(symbol == '**') this.result = this.firstNumber ** this.secondNumber
+      }
     }
   }
 }
