@@ -4,6 +4,7 @@
       class="input"
       type="text"
       @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus')"
       :placeholder="placeholder"
     >
   </div>

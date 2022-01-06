@@ -3,8 +3,16 @@
 
     <div class="content">
       <div class="content__wrap-input">
-        <Input v-model.number="firstNumber" placeholder="Введите первое число" />
-        <Input v-model.number="secondNumber" placeholder="Введите вторе число" />
+        <Input
+          @focus="focus"
+          v-model.number="firstNumber"
+          placeholder="Введите первое число"
+        />
+        <Input
+          @focus="focus"
+          v-model.number="secondNumber"
+          placeholder="Введите вторе число"
+        />
       </div>
       <div class="content__result">
         <h4 class="content__title">Результат: </h4>
@@ -19,6 +27,7 @@
           {{item.th}}
         </Btn>
       </div>
+      <Keyboard />
     </div>
 
   </Wrapper>
@@ -28,10 +37,11 @@
 import Input from '@/components/input.vue'
 import Btn from '@/components/btn.vue'
 import Wrapper from '@/views/calculator/components/centering.vue'
+import Keyboard from '@/views/calculator/components/ keyboard.vue'
 
 export default {
   name: 'Calculator',
-  components: { Input, Wrapper, Btn },
+  components: { Input, Wrapper, Btn, Keyboard },
   data () {
     return {
       firstNumber: '',
@@ -66,6 +76,9 @@ export default {
         if(symbol == '*') this.result = this.firstNumber * this.secondNumber
         if(symbol == '**') this.result = this.firstNumber ** this.secondNumber
       }
+    },
+
+    focus () {
     }
   }
 }
