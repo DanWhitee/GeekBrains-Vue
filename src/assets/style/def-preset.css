@@ -1,0 +1,35 @@
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 0 15px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+button:active, button:hover, button:focus {
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+}
