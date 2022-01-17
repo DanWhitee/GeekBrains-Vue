@@ -12,8 +12,8 @@
     
     <div v-show="activeKeyboard" class="keyboard-body">
       <Btn
-        @click="asd"
         v-for="(item, index) in arrayNumber"
+        @click="$emit('number', +item.num)"
         :key="index"
       >
         {{item.num}}
@@ -31,7 +31,6 @@ export default {
   data () {
     return {
       activeKeyboard: true,
-      accwq: [],
       arrayNumber: [
         {
           num: '0'
@@ -64,12 +63,6 @@ export default {
           num: '9'
         }
       ]
-    }
-  },
-  methods: {
-    asd (e) {
-      this.accwq.push = e.innerText
-      console.log(this.accwq)
     }
   }
 }
