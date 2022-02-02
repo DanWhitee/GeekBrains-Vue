@@ -3,7 +3,9 @@
     <input
       class="input"
       type="text"
+      :name="name"
       @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target)"
       :placeholder="placeholder"
     >
   </div>
@@ -16,6 +18,14 @@ export default {
     placeholder: {
       type: String,
       require: true
+    },
+    name: {
+      type: String,
+      require: true
+    },
+    modal: {
+      type: String,
+      default: ''
     }
   }
 }
